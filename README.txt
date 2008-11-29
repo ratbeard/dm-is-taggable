@@ -119,21 +119,6 @@ h3. Retrieve objects with tags
     Picture.find(:with => "tag1, tag2", :match => :any)
   end
   
-    
-  # You can tag like this
-  @picture.tag(:with => "shanghai, bar, beer", :by => @scott)
-  
-  # or like this
-  # Note: this doesn't remove the previous tags
-  Tag.as(@scott) do
-    @picture.tag(:with => "cool, tag1, tag2")
-  end
-  
-  # or like this
-  # Note, this removes all previous tags
-  Tag.as(@scott) do
-    @picture.taglist("cool, tag1, tag2")
-  end
 </code></pre>
 
 h3. Retrieve tags with objects
